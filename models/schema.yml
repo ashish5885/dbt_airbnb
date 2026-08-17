@@ -46,6 +46,7 @@ models:
     columns:
 
      - name: host_id
+       description: Primary key for the table.
        data_type: integer
        constraints:
          - type: not_null
@@ -53,11 +54,13 @@ models:
          - unique
 
      - name: host_name
+       description: Name of the host.
        data_type: string
        constraints:
          - type: not_null 
 
      - name: is_superhost
+       description: Is host superhost or not.
        data_type: string
        data_tests:
           - accepted_values:
