@@ -11,7 +11,7 @@ with src_listings as(
 
 select
  listing_id,
- listing_name,
+ listing_name as name_of_listing,
  room_type,
  case
   when minimum_nights = 0 then 1
