@@ -11,7 +11,7 @@ with src_listings as(
 
 select
  listing_id,
- listing_name as name_of_listing,
+ listing_name,
  room_type,
  case
   when minimum_nights = 0 then 1
@@ -19,6 +19,7 @@ select
  end as minimum_nights,
  host_id,
  replace(price_str, '$') :: number(10,2) as price,
+ price_str,
  created_at,
  updated_at
 from src_listings
